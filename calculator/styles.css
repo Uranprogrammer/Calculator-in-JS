@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Arvo', serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: rgb(36, 52, 65);;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 10px;
+    
+}
+
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    outline: none;
+    background-color: rgb(36, 52, 65);
+    border-radius: 5px;
+    color: orange;
+    
+}
+
+.calculator-grid > button:hover{
+    background-color: rgba(255, 255, 255, 0.177);
+}
+
+.calculator-grid .span-two{
+    background-color: orange;
+    color: white;
+}
+
+.calculator-grid .span-two:hover{
+    background-color: rgba(255, 255, 255, 0.177);
+}
+
+.calculator-grid .green{
+    color: rgb(1, 194, 1);
+}
+
+.calculator-grid .red{
+    color: rgb(231, 0, 0);
+}
+
+.calculator-grid .blue{
+    color: rgb(0, 172, 172);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.442);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.output .previous-operand{
+    color: rgba(255, 255, 255, 0.517);
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
+
+
